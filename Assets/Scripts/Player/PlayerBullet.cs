@@ -31,6 +31,7 @@ public class PlayerBullet : MonoBehaviour
             DestroyBullet();
         }
     }
+
     private void DestroyBullet()
     {
         bulletVelocity = 0;

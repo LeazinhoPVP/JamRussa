@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
-    public GameObject balaPrefab;
+    public GameObject bulletPrefab;
     public Transform cane;
     public float firerate;
+    public int type;
+    public GameObject slugCaneA, slugCaneB, slugCaneC;
+    public GameObject skullCaneA, skullCaneB, skullCaneC, skullCaneD;
+    public Animator animator;
 
     private float lastFire;
 
@@ -17,9 +21,9 @@ public class PlayerAttack : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0) && CanShoot())
+        if (Input.GetKey(KeyCode.Mouse0) && CanShoot())
         {
-            Shoot();
+            animator.SetTrigger("Attack");
         }
     }
 
@@ -27,13 +31,45 @@ public class PlayerAttack : MonoBehaviour
     {
         return Time.time - lastFire >= 1f / firerate;
     }
-
-    private void Shoot()
+    private void FireBullet(Transform firePoint)
     {
-        if (balaPrefab != null && cane != null)
+        Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        lastFire = Time.time;
+    }
+    public void Shoot()
+    {
+        switch (type)
+        {
+            case 0:
+                //Ghost
+                FireBullet(cane.transform);
+                break;
+            case 1:
+                //Mosca
+                FireBullet(cane.transform);
+                break;
+            case 2:
+                //Caveira
+                FireBullet(skullCaneA.transform);
+                FireBullet(skullCaneB.transform);
+                FireBullet(skullCaneC.transform);
+                FireBullet(skullCaneD.transform);
+                break;
+            case 3:
+                //Verme
+                FireBullet(slugCaneA.transform);
+                FireBullet(slugCaneB.transform);
+                FireBullet(slugCaneC.transform);
+                break;
+            case 4:
+                //Demonio
+                FireBullet(cane.transform);
+                break;
+        }
+        if (bulletPrefab != null && cane != null)
         {
             lastFire = Time.time;
-            Instantiate(balaPrefab, cane.position, cane.rotation);
+            Instantiate(bulletPrefab, cane.position, cane.rotation);
         }
     }
 }

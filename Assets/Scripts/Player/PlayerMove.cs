@@ -14,9 +14,12 @@ public class PlayerMove : MonoBehaviour
     private float dashTimer = 0f;
     private float dashCooldownTimer = 0f;
 
+    public bool ghost = true;
+
     void Start()
     {
         mainCamera = Camera.main;
+        GameManager.instance.player = this;
     }
 
     private void Update()
@@ -59,7 +62,7 @@ public class PlayerMove : MonoBehaviour
 
             float pitch = Mathf.Atan2(direction.y, direction.magnitude) * Mathf.Rad2Deg;
             head.transform.localRotation = Quaternion.Euler(-pitch, 0, 0);
-            transform.forward = direction;
+            head.transform.forward = direction;
         }
     }
 
@@ -80,7 +83,7 @@ public class PlayerMove : MonoBehaviour
         }
         else
         {
-            Vector3 moveDirection = transform.forward;
+            Vector3 moveDirection = head.transform.forward;
             float dashLerpFactor = Mathf.Clamp01(dashTimer / dashDuration);
             float currentSpeed = Mathf.Lerp(dashSpeed, moveSpeed, dashLerpFactor);
             transform.Translate(moveDirection * currentSpeed * Time.deltaTime, Space.World);

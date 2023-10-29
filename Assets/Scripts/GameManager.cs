@@ -4,14 +4,12 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager instance;
     public Transform target;
-
-    private void Update()
+    public bool possess = false;
+    public PlayerMove player;
+    private void Awake()
     {
-        if (target != null)
-        {
-            transform.LookAt(target);
-            transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
-        }
+        instance = this;
     }
 }

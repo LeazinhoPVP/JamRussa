@@ -4,50 +4,65 @@ using UnityEngine;
 
 public class EnemiesGuns : MonoBehaviour
 {
+    public Enemies enemy;
+    public int enemyType;
     public GameObject bulletPrefab;
     public GameObject cane;
-    public GameObject shotgunCaneA, shotgunCaneB, shotgunCaneC;
-    public bool isShotgun = false;
-    public float firerate;
-    public int weaponDamage;
+    public GameObject slugCaneA, slugCaneB, slugCaneC;
+    public GameObject skullCaneA, skullCaneB, skullCaneC, skullCaneD;
+    public float atackRate;
+
     private void Start()
     {
-        cane.SetActive(!isShotgun);
-        StartCoroutine(Fire());
+        StartCoroutine(DoAttack());
     }
 
-    private IEnumerator Fire()
+    private IEnumerator DoAttack()
     {
         while (true)
         {
-            yield return new WaitForSeconds(1f / firerate);
+            yield return new WaitForSeconds(atackRate);
+            enemy.animator.SetTrigger("Attack");
+            
+        }
+    }
+    public void Fire()
+    {
 
-            if (bulletPrefab != null)
+        if (bulletPrefab != null)
+        {
+            switch (enemyType)
             {
-                if (!isShotgun)
-                {
+                case 0:
+                    //Ghost
                     FireBullet(cane.transform);
-                }
-                else
-                {
-                    FireBullet(shotgunCaneA.transform);
-                    FireBullet(shotgunCaneB.transform);
-                    FireBullet(shotgunCaneC.transform);
-                }
+                    break;
+                case 1:
+                    //Mosca
+                    FireBullet(cane.transform);
+                    break;
+                case 2:
+                    //Caveira
+                    FireBullet(skullCaneA.transform);
+                    FireBullet(skullCaneB.transform);
+                    FireBullet(skullCaneC.transform);
+                    FireBullet(skullCaneD.transform);
+                    break;
+                case 3:
+                    //Verme
+                    FireBullet(slugCaneA.transform);
+                    FireBullet(slugCaneB.transform);
+                    FireBullet(slugCaneC.transform);
+                    break;
+                case 4:
+                    //Demonio
+                    FireBullet(cane.transform);
+                    break;
             }
         }
     }
-
     private void FireBullet(Transform firePoint)
     {
-        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-        EnemiesBullets bulletScript = bullet.GetComponent<EnemiesBullets>();
-
-        if (bulletScript != null)
-        {
-            bulletScript.enemiesdamage = weaponDamage;
-        }
+        Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
     }
-
-
 }

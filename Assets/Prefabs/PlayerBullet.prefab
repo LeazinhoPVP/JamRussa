@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6722839273622119805
 Transform:
   m_ObjectHideFlags: 0
@@ -146,3 +146,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletVelocity: 20
   damage: 20
+  bullet: {fileID: 2575576487818231534}
