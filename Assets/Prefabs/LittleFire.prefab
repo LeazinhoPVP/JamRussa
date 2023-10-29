@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19207c7221db7c84a92c9efaa5b2ba20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dungeon: {fileID: 6426141092244243826, guid: c6539995ff384074eb767548395eaab4, type: 3}
+  dungeon: {fileID: 7439359555587560920, guid: 717267f7d9404514ab8ed119e9c1943f, type: 3}
   dungeonLocation: {fileID: 2638019895771007498}
 --- !u!65 &2638019895771007492
 BoxCollider:
