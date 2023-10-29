@@ -6,13 +6,14 @@ public class PlayerMove : MonoBehaviour
     private Camera mainCamera;
     public GameObject head;
     public float moveSpeed;
-    public float dashSpeed; 
+    public float dashSpeed;
     public float dashDuration;
     public float dashCooldown;
 
     private bool isDashing = false;
-    private float dashTimer = 0f;
     private float dashCooldownTimer = 0f;
+
+    private Rigidbody rb;
 
     public bool ghost = true;
 
@@ -20,6 +21,10 @@ public class PlayerMove : MonoBehaviour
     {
         mainCamera = Camera.main;
         GameManager.instance.player = this;
+
+        rb = GetComponent<Rigidbody>();
+        rb.freezeRotation = true;
+        rb.useGravity = false;
     }
 
     private void Update()
@@ -36,6 +41,7 @@ public class PlayerMove : MonoBehaviour
             Dash();
         }
     }
+
     private void FixedUpdate()
     {
         Aim();
@@ -49,9 +55,10 @@ public class PlayerMove : MonoBehaviour
 
         if (!isDashing)
         {
-            transform.Translate(moveDirection * moveSpeed * Time.deltaTime, Space.World);
+            rb.velocity = moveDirection * moveSpeed;
         }
     }
+
     private void Aim()
     {
         var (success, position) = GetMousePosition();
@@ -69,27 +76,20 @@ public class PlayerMove : MonoBehaviour
     private void StartDash()
     {
         isDashing = true;
-        dashTimer = 0f;
+        rb.velocity = Vector3.zero;
         dashCooldownTimer = Time.time + dashCooldown;
     }
 
     private void Dash()
     {
-        dashTimer += Time.deltaTime;
-
-        if (dashTimer >= dashDuration)
+        Vector3 moveDirection = head.transform.forward;
+        rb.velocity = moveDirection * dashSpeed;
+        if (Time.time >= dashCooldownTimer)
         {
             isDashing = false;
-        }
-        else
-        {
-            Vector3 moveDirection = head.transform.forward;
-            float dashLerpFactor = Mathf.Clamp01(dashTimer / dashDuration);
-            float currentSpeed = Mathf.Lerp(dashSpeed, moveSpeed, dashLerpFactor);
-            transform.Translate(moveDirection * currentSpeed * Time.deltaTime, Space.World);
+            rb.velocity = Vector3.zero;
         }
     }
-
 
     private (bool success, Vector3 position) GetMousePosition()
     {

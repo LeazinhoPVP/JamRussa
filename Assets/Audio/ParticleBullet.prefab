@@ -5017,6 +5017,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6599061be8a607a4ba9ebe32b0863746, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletVelocity: 15
+  bulletVelocity: 50
   damage: 10
   bullet: {fileID: 6286290158803029442}

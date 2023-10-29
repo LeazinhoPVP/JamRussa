@@ -7,11 +7,6 @@ public class FireSpawn : MonoBehaviour
     public GameObject objectToSpawn;
     public Transform[] spawnPoints;
 
-    private void Start()
-    {
-        SpawnObjectRandomly();
-    }
-
     public void SpawnObjectRandomly()
     {
         int randomIndex = Random.Range(0, spawnPoints.Length);

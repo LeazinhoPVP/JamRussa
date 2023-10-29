@@ -9,11 +9,15 @@ public class LittleFire : MonoBehaviour
     int enemiesKilled = 0;
     public Transform dungeonLocation;
     private GameObject actualDungeonObj;
+    public FireSpawn fireSpawn;
 
     private void Start()
     {
+        dungeonLocation = GameManager.instance.player.transform;
         GameManager.instance.dungeonSpawner = this;
+        fireSpawn.SpawnObjectRandomly();
     }
+
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.CompareTag("Player") == true)
@@ -29,6 +33,7 @@ public class LittleFire : MonoBehaviour
             enemiesKilled = 0;
             GameManager.instance.actualDungeon++;
             Destroy(actualDungeonObj);
+            fireSpawn.SpawnObjectRandomly();
         }
     }
     private void SpawnDungeon()
