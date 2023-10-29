@@ -38,6 +38,7 @@ public class LittleFire : MonoBehaviour
     }
     private void SpawnDungeon()
     {
+        AudioManager.audioManager.InCombat = 1;
         Vector3 spawnPosition = dungeonLocation.position - new Vector3(0f, 0f, 0f);
         actualDungeonObj = Instantiate(dungeon[GameManager.instance.actualDungeon], spawnPosition, dungeonLocation.rotation);
         Destroy(gameObject);

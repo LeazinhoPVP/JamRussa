@@ -589,6 +589,7 @@ MonoBehaviour:
   skullCaneC: {fileID: 1657205474682612266}
   skullCaneD: {fileID: 6853739625819597539}
   atackRate: 3
+  distance: 0
 --- !u!114 &8637506036172064781
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -601,9 +602,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4f1bce792559404b9ce2b59c40b799d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 1
   rotationSpeed: 3
-  detectionRange: 10
+  detectionRange: 25
   retreatDistance: 3
   maxHealth: 1
   currentHealth: 1
@@ -619,7 +620,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 1
+  m_Radius: 0.69
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}

@@ -9,7 +9,7 @@ public class PlayerAttack : MonoBehaviour
     public float firerate;
     public int type;
     public GameObject slugCaneA, slugCaneB, slugCaneC;
-    public GameObject skullCaneA, skullCaneB, skullCaneC, skullCaneD;
+    public GameObject skullCaneA, skullCaneB, skullCaneC, skullCaneD, skullCaneE;
     public Animator animator;
     private bool resumeFire = true;
 
@@ -62,6 +62,7 @@ public class PlayerAttack : MonoBehaviour
                 FireBullet(skullCaneB.transform);
                 FireBullet(skullCaneC.transform);
                 FireBullet(skullCaneD.transform);
+                FireBullet(skullCaneE.transform);
                 break;
             case 3:
                 //Verme
@@ -76,10 +77,10 @@ public class PlayerAttack : MonoBehaviour
                 FireBullet(cane.transform);
                 break;
         }
-        if (bulletPrefab != null && cane != null)
+        /*if (bulletPrefab != null && cane != null) // Esse if faz o jogador atirar dois tiros ao mesmo tempo no modo fantasma
         {
             lastFire = Time.time;
             Instantiate(bulletPrefab, cane.position, cane.rotation);
-        }
+        }*/
     }
 }

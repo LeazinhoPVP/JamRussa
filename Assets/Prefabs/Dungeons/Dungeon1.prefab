@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1103279476207549387}
   - component: {fileID: 1103279476207549386}
   - component: {fileID: 1103279476207549389}
+  - component: {fileID: 1000774506786103290}
   m_Layer: 0
   m_Name: Cube (9)
   m_TagString: Wall
@@ -114,6 +115,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!65 &1000774506786103290
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1103279476207549391}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0000002, y: 2.38, z: 1.0000002}
+  m_Center: {x: 0, y: 0.69, z: 0}
 --- !u!1 &1103279476216412903
 GameObject:
   m_ObjectHideFlags: 0
@@ -127,6 +141,7 @@ GameObject:
   - component: {fileID: 1103279476216412899}
   - component: {fileID: 1103279476216412898}
   - component: {fileID: 1103279476216412901}
+  - component: {fileID: 2288157734630965881}
   m_Layer: 0
   m_Name: Cube (5)
   m_TagString: Wall
@@ -228,6 +243,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!65 &2288157734630965881
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1103279476216412903}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0000002, y: 2.38, z: 1.0000002}
+  m_Center: {x: 0, y: 0.69, z: 0}
 --- !u!1 &1103279476340527869
 GameObject:
   m_ObjectHideFlags: 0
@@ -241,6 +269,7 @@ GameObject:
   - component: {fileID: 1103279476340527865}
   - component: {fileID: 1103279476340527864}
   - component: {fileID: 1103279476340527867}
+  - component: {fileID: 988639290637266607}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Wall
@@ -342,6 +371,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!65 &988639290637266607
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1103279476340527869}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 2.38, z: 1}
+  m_Center: {x: 0, y: 0.69, z: 0}
 --- !u!1 &1103279476671901849
 GameObject:
   m_ObjectHideFlags: 0
@@ -355,6 +397,7 @@ GameObject:
   - component: {fileID: 1103279476671901845}
   - component: {fileID: 1103279476671901844}
   - component: {fileID: 1103279476671901847}
+  - component: {fileID: 7898018342958507548}
   m_Layer: 0
   m_Name: Cube (6)
   m_TagString: Wall
@@ -456,6 +499,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!65 &7898018342958507548
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1103279476671901849}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 2.38, z: 1}
+  m_Center: {x: 0, y: 0.69, z: 0}
 --- !u!1 &1103279476976326955
 GameObject:
   m_ObjectHideFlags: 0
@@ -559,6 +615,7 @@ GameObject:
   - component: {fileID: 1103279477740728708}
   - component: {fileID: 1103279477740728711}
   - component: {fileID: 1103279477740728710}
+  - component: {fileID: 8611633317539745891}
   m_Layer: 0
   m_Name: Cube (8)
   m_TagString: Wall
@@ -660,6 +717,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!65 &8611633317539745891
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1103279477740728712}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0000002, y: 2.38, z: 1.0000002}
+  m_Center: {x: 0, y: 0.69, z: 0}
 --- !u!1 &1103279477908015665
 GameObject:
   m_ObjectHideFlags: 0
@@ -673,6 +743,7 @@ GameObject:
   - component: {fileID: 1103279477908016077}
   - component: {fileID: 1103279477908016076}
   - component: {fileID: 1103279477908016079}
+  - component: {fileID: 8320385572450310045}
   m_Layer: 0
   m_Name: Cube (10)
   m_TagString: Wall
@@ -774,3 +845,16 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!65 &8320385572450310045
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1103279477908015665}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0000002, y: 2.38, z: 1.0000002}
+  m_Center: {x: 0, y: 0.69, z: 0}

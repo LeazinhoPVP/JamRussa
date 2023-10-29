@@ -28,7 +28,7 @@ public class AudioManager : MonoBehaviour
 
     [SerializeField]
     [Range(0f, 1f)]
-    private float CombateType, InCombat;
+    public float CombateType, InCombat;
 
 
     public void HitEnemy()

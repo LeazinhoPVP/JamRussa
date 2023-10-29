@@ -395,6 +395,7 @@ MonoBehaviour:
   skullCaneB: {fileID: 0}
   skullCaneC: {fileID: 0}
   skullCaneD: {fileID: 0}
+  skullCaneE: {fileID: 0}
   animator: {fileID: 5608809484374353526}
 --- !u!1 &7141224244293090465
 GameObject:

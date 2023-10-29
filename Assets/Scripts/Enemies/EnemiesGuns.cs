@@ -12,18 +12,27 @@ public class EnemiesGuns : MonoBehaviour
     public GameObject skullCaneA, skullCaneB, skullCaneC, skullCaneD;
     public float atackRate;
 
+    Transform player;
+    public float distance;
+
+
     private void Start()
     {
         StartCoroutine(DoAttack());
+        player = GameManager.instance.player.transform;
     }
-
+    private void Update()
+    {
+        distance = Vector3.Distance(transform.position, player.position);
+        Debug.Log(distance);
+    }
     private IEnumerator DoAttack()
     {
         while (enemy.currentHealth > 0)
         {
             if(enemyType != 0)
             {
-            enemy.animator.SetTrigger("Attack");        
+                enemy.animator.SetTrigger("Attack");        
             }
             else
             {
@@ -46,33 +55,45 @@ public class EnemiesGuns : MonoBehaviour
             {
                 case 0:
                     //Ghost
-                    AudioManager.audioManager.PlayerFire();
+                    //AudioManager.audioManager.PlayerFire();
                     StartCoroutine(Dash());
                     break;
                 case 1:
                     //Mosca
+                    
                     AudioManager.audioManager.MoscaFire();
                     FireBullet(cane.transform);
                     break;
                 case 2:
                     //Caveira
-                    AudioManager.audioManager.CaveiraFire();
-                    FireBullet(skullCaneA.transform);
-                    FireBullet(skullCaneB.transform);
-                    FireBullet(skullCaneC.transform);
-                    FireBullet(skullCaneD.transform);
-                    break;
+                    
+                    if (distance <= 30)
+                    {
+                        AudioManager.audioManager.CaveiraFire();
+                        FireBullet(skullCaneA.transform);
+                        FireBullet(skullCaneB.transform);
+                        FireBullet(skullCaneC.transform);
+                        FireBullet(skullCaneD.transform);
+                    }
+                break;
                 case 3:
-                    //Verme
-                    AudioManager.audioManager.VermeFire();
-                    FireBullet(slugCaneA.transform);
-                    FireBullet(slugCaneB.transform);
-                    FireBullet(slugCaneC.transform);
-                    break;
+                //Verme
+                    if (distance <= 10)
+                    {
+                        AudioManager.audioManager.VermeFire();
+                        FireBullet(slugCaneA.transform);
+                        FireBullet(slugCaneB.transform);
+                        FireBullet(slugCaneC.transform);
+                    }
+                        break;
                 case 4:
-                    //Demonio
-                    AudioManager.audioManager.DemonioFire();
-                    FireBullet(cane.transform);
+                //Demonio
+                    if (distance <= 10)
+                    {
+                        AudioManager.audioManager.DemonioFire();
+                        FireBullet(cane.transform);
+                    }
+                
                     break;
             }
     }

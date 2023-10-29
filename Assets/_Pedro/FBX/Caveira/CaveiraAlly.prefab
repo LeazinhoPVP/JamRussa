@@ -95,6 +95,37 @@ Transform:
   m_Father: {fileID: 5210924583305374973}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0.15648182, y: -0.16993569, z: -0.0004641161}
+--- !u!1 &698768130922471119
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6369140443794758583}
+  m_Layer: 0
+  m_Name: E
+  m_TagString: Untagged
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6369140443794758583
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 698768130922471119}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.68, z: 1.5399995}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8094143378613251511}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2186536258202809874
 GameObject:
   m_ObjectHideFlags: 0
@@ -537,6 +568,7 @@ Transform:
   - {fileID: 1479994520053417912}
   - {fileID: 7689297418315790186}
   - {fileID: 1926191816478990426}
+  - {fileID: 6369140443794758583}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -585,6 +617,7 @@ MonoBehaviour:
   skullCaneB: {fileID: 4836438048413530193}
   skullCaneC: {fileID: 411968953865086659}
   skullCaneD: {fileID: 2186536258202809874}
+  skullCaneE: {fileID: 698768130922471119}
   animator: {fileID: 8637506036172064782}
 --- !u!1 &9030523572877757021
 GameObject:

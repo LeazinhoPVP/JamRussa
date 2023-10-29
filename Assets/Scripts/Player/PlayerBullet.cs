@@ -9,9 +9,12 @@ public class PlayerBullet : MonoBehaviour
     public int damage = 10;
     public Collider bullet;
 
+    public ParticleSystem HitEffect;
+
     void Update()
     {
         transform.Translate(Vector3.forward * bulletVelocity * Time.deltaTime);
+        Destroy(gameObject, 10f);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -23,12 +26,14 @@ public class PlayerBullet : MonoBehaviour
             if (enemyScript != null)
             {
                 enemyScript.TakeDamage(damage);
+                AudioManager.audioManager.HitEnemy();
             }
             DestroyBullet();
         }
         if(other.gameObject.CompareTag("Wall") == true)
         {
             DestroyBullet();
+            AudioManager.audioManager.HitMisc();
         }
     }
 
@@ -36,6 +41,8 @@ public class PlayerBullet : MonoBehaviour
     {
         bulletVelocity = 0;
         bullet.enabled = false;
+        HitEffect.Play();
+
         Destroy(gameObject, 1f);
     }
 }
