@@ -7,9 +7,9 @@ public class LittleFire : MonoBehaviour
     public GameObject dungeon;
     public Transform dungeonLocation;
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if(other.gameObject.CompareTag("Player") == true)
         {
             SpawnDungeon();
         }
@@ -17,7 +17,7 @@ public class LittleFire : MonoBehaviour
 
     private void SpawnDungeon()
     {
-        Vector3 spawnPosition = dungeonLocation.position - new Vector3(0f, 1f, 0f);
+        Vector3 spawnPosition = dungeonLocation.position - new Vector3(0f, 0f, 0f);
         Instantiate(dungeon, spawnPosition, dungeonLocation.rotation);
         Destroy(gameObject);
     }
