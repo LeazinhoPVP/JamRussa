@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PlayerLife : MonoBehaviour
@@ -32,7 +33,7 @@ public class PlayerLife : MonoBehaviour
         {
             AudioManager.audioManager.PlayerKill();
             Instantiate(SFXDeath, transform.position, Quaternion.identity);
-            Destroy(gameObject);
+            SceneManager.LoadScene("Defeat");
         }
     }
 }
