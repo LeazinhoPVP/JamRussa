@@ -908,7 +908,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 1885034590785886878}
   enemyType: 1
-  bulletPrefab: {fileID: 9008499812475778835, guid: aaaf1b630ad49234d9c19b07021d2eca,
+  bulletPrefab: {fileID: 9008499812475778835, guid: 8049bf8afc551904c80c66f484885ce6,
     type: 3}
   cane: {fileID: 5806558207661031049}
   slugCaneA: {fileID: 0}
@@ -932,11 +932,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4f1bce792559404b9ce2b59c40b799d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
+  speed: 10
   rotationSpeed: 5
-  detectionRange: 40
-  retreatDistance: 6
-  maxHealth: 1
+  detectionRange: 60
+  retreatDistance: 30
+  maxHealth: 5
   currentHealth: 1
   player: {fileID: 0}
   animator: {fileID: 4452264370109416488}

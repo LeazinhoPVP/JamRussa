@@ -67,7 +67,7 @@ public class EnemiesGuns : MonoBehaviour
                 case 2:
                     //Caveira
                     
-                    if (distance <= 30)
+                    if (distance <= 15)
                     {
                         AudioManager.audioManager.CaveiraFire();
                         FireBullet(skullCaneA.transform);
@@ -88,7 +88,7 @@ public class EnemiesGuns : MonoBehaviour
                         break;
                 case 4:
                 //Demonio
-                    if (distance <= 10)
+                    if (distance <= 20)
                     {
                         AudioManager.audioManager.DemonioFire();
                         FireBullet(cane.transform);
