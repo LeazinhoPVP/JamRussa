@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -508,37 +508,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &934660874
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 934660875}
-  m_Layer: 0
-  m_Name: EnemiesSpawn
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &934660875
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 934660874}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.1745342, y: 13.937426, z: -12.054352}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 13
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1060050317
 GameObject:
   m_ObjectHideFlags: 0
@@ -934,7 +903,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1198431288}
-  m_LocalRotation: {x: 0.56062883, y: 0.000000014248041, z: -0.000000009646396, w: 0.82806724}
+  m_LocalRotation: {x: 0.56062883, y: -0.000000014248038, z: 0.000000009646394, w: 0.82806724}
   m_LocalPosition: {x: 0, y: 26.026001, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1097,7 +1066,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1280553034}
-  m_LocalRotation: {x: 0.56062883, y: 0.000000014248041, z: -0.000000009646396, w: 0.82806724}
+  m_LocalRotation: {x: 0.56062883, y: -0.000000014248038, z: 0.000000009646394, w: 0.82806724}
   m_LocalPosition: {x: 0, y: 26.026001, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1883,7 +1852,7 @@ PrefabInstance:
     - target: {fileID: 1103279476976326955, guid: 2da18cb925856ee4aaf0a6329a3980b1,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2da18cb925856ee4aaf0a6329a3980b1, type: 3}
@@ -2109,6 +2078,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7422918984009420938, guid: d51963f51ce24f845a7f313a0ad5cdc8,
+        type: 3}
+      propertyPath: dungeon.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7422918984009420938, guid: d51963f51ce24f845a7f313a0ad5cdc8,
+        type: 3}
+      propertyPath: dungeon.Array.data[0]
+      value: 
+      objectReference: {fileID: 8906119562341338181, guid: d7197317353230544a2f373532599674,
+        type: 3}
     - target: {fileID: 7422918984009420941, guid: d51963f51ce24f845a7f313a0ad5cdc8,
         type: 3}
       propertyPath: m_Name

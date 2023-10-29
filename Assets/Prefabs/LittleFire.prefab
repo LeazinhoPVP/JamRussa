@@ -201,7 +201,6 @@ MonoBehaviour:
   dungeon:
   - {fileID: 1103279476976326955, guid: 2da18cb925856ee4aaf0a6329a3980b1, type: 3}
   - {fileID: 8906119562341338181, guid: 49a7dfc85c7d0644883d845459c6938c, type: 3}
-  - {fileID: 0}
   enemyQuantity: 0200000002000000
   dungeonLocation: {fileID: 7422918984009420937}
   fireSpawn: {fileID: 6912472684897059008}
