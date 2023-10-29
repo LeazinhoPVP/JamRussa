@@ -5,24 +5,23 @@ using FMODUnity;
 
 public class AudioManager : MonoBehaviour
 {
-    public static AudioManager audioManager;
+    private FMOD.Studio.EventInstance instance;
 
-    public FMODUnity.EventReference musica;
+    public FMODUnity.EventReference fmodEvent;
 
-    public FMODUnity.EditorParamRef teste;
+    [SerializeField]
+    [Range(0f, 1f)]
+    private float CombateType, InCombat;
 
-    public string parameterName;
-    public float parameterValue;
-
-    // Start is called before the first frame update
     void Start()
     {
-        RuntimeManager.PlayOneShot(musica);
+        instance = FMODUnity.RuntimeManager.CreateInstance(fmodEvent);
+        instance.start();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        RuntimeManager.StudioSystem.setParameterByName(parameterName, parameterValue);
+        instance.setParameterByName("CombateType", CombateType);
+        instance.setParameterByName("InCombat", InCombat);
     }
 }

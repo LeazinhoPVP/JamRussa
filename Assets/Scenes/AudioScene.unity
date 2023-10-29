@@ -10235,16 +10235,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27b2bfeaf225ba342ae83c58dbe5ce21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musica:
+  fmodEvent:
     Guid:
       Data1: 509122289
       Data2: 1250305661
       Data3: 264023728
       Data4: 596951265
     Path: event:/Music
-  teste: {fileID: 0}
-  parameterName: 
-  parameterValue: 0
+  CombateType: 0
+  InCombat: 0
 --- !u!4 &1083240129
 Transform:
   m_ObjectHideFlags: 0
