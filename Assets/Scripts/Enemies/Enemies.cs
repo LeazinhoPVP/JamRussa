@@ -1,3 +1,4 @@
+using FMOD;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,10 +12,11 @@ public class Enemies : MonoBehaviour
     public int maxHealth = 50;
     public int currentHealth;
     public Transform player;
-
+    float timer = 0;
+    public Animator animator;
     private void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player").transform;
+        player = GameManager.instance.player.transform;
         currentHealth = maxHealth;
     }
 
@@ -41,15 +43,19 @@ public class Enemies : MonoBehaviour
                 }
             }
         }
+        if(currentHealth <= 0)
+        {
+            speed = 0;
+            timer += Time.deltaTime;
+            if(timer > 5)
+            {
+                Destroy(gameObject);
+            }
+        }
     }
 
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
-
-        if (currentHealth <= 0)
-        {
-            Destroy(gameObject);
-        }
     }
 }
