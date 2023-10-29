@@ -11,6 +11,9 @@ public class GameManager : MonoBehaviour
     public PlayerPossess playerPossess;
     public LittleFire dungeonSpawner;
     public int actualDungeon = 0;
+
+
+
     private void Awake()
     {
         instance = this;
@@ -19,5 +22,11 @@ public class GameManager : MonoBehaviour
     {
         dungeonSpawner.fireSpawn.SpawnObjectRandomly();
     }
+
+    public void KillEnemy()
+    {
+        dungeonSpawner.EnemyCounter();
+    }
+
 
 }

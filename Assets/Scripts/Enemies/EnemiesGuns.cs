@@ -24,7 +24,7 @@ public class EnemiesGuns : MonoBehaviour
     private void Update()
     {
         distance = Vector3.Distance(transform.position, player.position);
-        Debug.Log(distance);
+        //Debug.Log(distance);
     }
     private IEnumerator DoAttack()
     {

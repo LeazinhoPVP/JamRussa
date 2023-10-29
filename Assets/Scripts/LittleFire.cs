@@ -8,23 +8,16 @@ public class LittleFire : MonoBehaviour
     public int[] enemyQuantity = new int[6]; 
     int enemiesKilled = 0;
     public Transform dungeonLocation;
-    private GameObject actualDungeonObj;
+    public GameObject actualDungeonObj;
     public FireSpawn fireSpawn;
 
     private void Start()
     {
-        dungeonLocation = GameManager.instance.player.transform;
+        //dungeonLocation = GameManager.instance.player.transform;
         GameManager.instance.dungeonSpawner = this;
-        fireSpawn.SpawnObjectRandomly();
+        //fireSpawn.SpawnObjectRandomly();
     }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if(other.gameObject.CompareTag("Player") == true)
-        {
-            SpawnDungeon();
-        }
-    }
+ 
     public void EnemyCounter()
     {
         enemiesKilled++;
@@ -36,11 +29,11 @@ public class LittleFire : MonoBehaviour
             fireSpawn.SpawnObjectRandomly();
         }
     }
-    private void SpawnDungeon()
+    public void SpawnDungeon()
     {
         AudioManager.audioManager.InCombat = 1;
         Vector3 spawnPosition = dungeonLocation.position - new Vector3(0f, 0f, 0f);
-        actualDungeonObj = Instantiate(dungeon[GameManager.instance.actualDungeon], spawnPosition, dungeonLocation.rotation);
-        Destroy(gameObject);
+        GameObject i = Instantiate(dungeon[GameManager.instance.actualDungeon], spawnPosition, dungeonLocation.rotation);
+        actualDungeonObj = i;
     }
 }

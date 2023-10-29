@@ -11,6 +11,11 @@ public class Enemies : MonoBehaviour
     public Transform player;
     float timer = 0;
     public Animator animator;
+
+    public bool cantPosses;
+
+    public ParticleSystem VFXPossuivel;
+
     private void Start()
     {
         player = GameManager.instance.player.transform;
@@ -42,24 +47,32 @@ public class Enemies : MonoBehaviour
         }
         if(currentHealth <= 0)
         {
-            if(maxHealth == 2)
-            {
+            if (cantPosses)
                 Destroy(gameObject);
-            }
+
             rotationSpeed = 0;
             animator.speed = 0;
             speed = 0;
-            timer += Time.deltaTime;
-            if(timer > 5)
-            {
-                GameManager.instance.dungeonSpawner.EnemyCounter();
-                Destroy(gameObject);
-            }
+            Invoke("VanishBody", 5f);
         }
+    }
+
+    void VanishBody()
+    {
+        GameManager.instance.KillEnemy();
+        Destroy(gameObject);
+    }
+
+
+    private void OnDestroy()
+    {
+        AudioManager.audioManager.KillEnemy();
     }
 
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
+        if (currentHealth <= 0 && cantPosses)
+            VFXPossuivel.Play();
     }
 }
