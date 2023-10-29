@@ -9,6 +9,9 @@ public class PlayerLife : MonoBehaviour
     public float currentHealth;
     public Slider sliderHealthBar;
     public Text debugTxt;
+
+
+    public GameObject SFXDeath;
     public void Start()
     {
         currentHealth = maxHealth;
@@ -28,6 +31,7 @@ public class PlayerLife : MonoBehaviour
         if (currentHealth <= 0)
         {
             AudioManager.audioManager.PlayerKill();
+            Instantiate(SFXDeath, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
     }
