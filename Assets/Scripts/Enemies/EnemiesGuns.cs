@@ -21,21 +21,33 @@ public class EnemiesGuns : MonoBehaviour
     {
         while (enemy.currentHealth > 0)
         {
-            yield return new WaitForSeconds(atackRate);
+            if(enemyType != 0)
+            {
             enemy.animator.SetTrigger("Attack");        
+            }
+            else
+            {
+                Fire();
+            }
+            yield return new WaitForSeconds(atackRate);
         }
+    }
+    private IEnumerator Dash()
+    {
+        enemy.speed = 10;
+        enemy.retreatDistance = 0;
+        yield return new WaitForSeconds(1);
+        enemy.retreatDistance = 5;
+        enemy.speed = 5;
     }
     public void Fire()
     {
-
-        if (bulletPrefab != null)
-        {
             switch (enemyType)
             {
                 case 0:
                     //Ghost
                     AudioManager.audioManager.PlayerFire();
-                    FireBullet(cane.transform);
+                    StartCoroutine(Dash());
                     break;
                 case 1:
                     //Mosca
@@ -63,7 +75,6 @@ public class EnemiesGuns : MonoBehaviour
                     FireBullet(cane.transform);
                     break;
             }
-        }
     }
     private void FireBullet(Transform firePoint)
     {

@@ -323,15 +323,13 @@ GameObject:
   - component: {fileID: 6161029568133740881}
   - component: {fileID: 5608809484374353526}
   - component: {fileID: 4358959152327783057}
-  - component: {fileID: 3225560128581113346}
-  - component: {fileID: -4753811637972465983}
   m_Layer: 0
   m_Name: VermeAlly
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6161029568133740881
 Transform:
   m_ObjectHideFlags: 0
@@ -339,7 +337,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6830710573516874731}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 6.22, y: 0, z: 7.61}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -388,7 +386,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 6281738804807888444, guid: 7bea01e7b9a35c142854b4c31c2a0f00,
     type: 3}
   cane: {fileID: 0}
-  firerate: 0
+  firerate: 2
   type: 3
   slugCaneA: {fileID: 1244177700098556610}
   slugCaneB: {fileID: 116019228004691068}
@@ -398,36 +396,6 @@ MonoBehaviour:
   skullCaneC: {fileID: 0}
   skullCaneD: {fileID: 0}
   animator: {fileID: 5608809484374353526}
---- !u!54 &3225560128581113346
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6830710573516874731}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 4
-  m_CollisionDetection: 0
---- !u!136 &-4753811637972465983
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6830710573516874731}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.8
-  m_Height: 3
-  m_Direction: 1
-  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1 &7141224244293090465
 GameObject:
   m_ObjectHideFlags: 0

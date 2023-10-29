@@ -1,6 +1,3 @@
-using FMOD;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemies : MonoBehaviour
@@ -45,7 +42,12 @@ public class Enemies : MonoBehaviour
         }
         if(currentHealth <= 0)
         {
-            animator.enabled = false;
+            if(maxHealth == 2)
+            {
+                Destroy(gameObject);
+            }
+            rotationSpeed = 0;
+            animator.speed = 0;
             speed = 0;
             timer += Time.deltaTime;
             if(timer > 5)
