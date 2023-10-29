@@ -69,7 +69,7 @@ public class AudioManager : MonoBehaviour
     }
     public void CaveiraFire()
     {
-        RuntimeManager.PlayOneShot(CaveiraFireRef);
+        FMODUnity.RuntimeManager.PlayOneShot(CaveiraFireRef);
     }
     public void MoscaFire()
     {
@@ -92,6 +92,7 @@ public class AudioManager : MonoBehaviour
         }
         else
         {
+            audioManager = this;
             instance = FMODUnity.RuntimeManager.CreateInstance(fmodEvent);
             instance.start();
         }
