@@ -7,6 +7,7 @@ TagManager:
   - Enemy
   - Wall
   - Possessable
+  - Victory
   layers:
   - Default
   - TransparentFX

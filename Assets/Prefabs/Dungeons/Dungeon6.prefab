@@ -478,7 +478,7 @@ MonoBehaviour:
   - {fileID: 4736879842103833562}
   - {fileID: 4254490904726864306}
   - {fileID: 8686775638287729351}
-  spawnInterval: 2
+  spawnInterval: 3
 --- !u!1 &2185244022379787796
 GameObject:
   m_ObjectHideFlags: 0

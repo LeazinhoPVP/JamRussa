@@ -1376,4 +1376,4 @@ MonoBehaviour:
   - {fileID: 4259864416265914030}
   - {fileID: 5523306834300392827}
   - {fileID: 1250326778361277333}
-  spawnInterval: 2
+  spawnInterval: 3
