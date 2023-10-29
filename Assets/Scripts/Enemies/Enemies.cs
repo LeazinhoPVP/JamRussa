@@ -7,6 +7,7 @@ public class Enemies : MonoBehaviour
     public float speed;
     public float rotationSpeed;
     public float detectionRange;
+    public float retreatDistance;
     public int maxHealth = 50;
     public int currentHealth;
     public Transform player;
@@ -29,10 +30,19 @@ public class Enemies : MonoBehaviour
                 directionToPlayer.y = 0;
                 Quaternion targetRotation = Quaternion.LookRotation(directionToPlayer);
                 transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
-                transform.Translate(Vector3.forward * speed * Time.deltaTime);
+
+                if (distanceToPlayer > retreatDistance)
+                {
+                    transform.Translate(Vector3.forward * speed * Time.deltaTime);
+                }
+                else
+                {
+                    transform.Translate(-Vector3.forward * speed * Time.deltaTime);
+                }
             }
         }
     }
+
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;

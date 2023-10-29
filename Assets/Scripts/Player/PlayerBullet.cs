@@ -7,6 +7,7 @@ public class PlayerBullet : MonoBehaviour
 {
     public float bulletVelocity;
     public int damage = 10;
+    public Collider bullet;
 
     void Update()
     {
@@ -23,8 +24,17 @@ public class PlayerBullet : MonoBehaviour
             {
                 enemyScript.TakeDamage(damage);
             }
-
-            Destroy(gameObject);
+            DestroyBullet();
         }
+        if(other.gameObject.CompareTag("Wall") == true)
+        {
+            DestroyBullet();
+        }
+    }
+    private void DestroyBullet()
+    {
+        bulletVelocity = 0;
+        bullet.enabled = false;
+        Destroy(gameObject, 1f);
     }
 }

@@ -145,5 +145,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemiesbulletVelocity: 15
-  enemiesdamage: 20
+  enemiesdamage: 0
   maxRange: 5
+  bullet: {fileID: 3679969062043495171}
