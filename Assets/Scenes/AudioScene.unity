@@ -10408,129 +10408,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 884896996}
   m_CullTransparentMesh: 1
---- !u!1 &1083240127
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1083240129}
-  - component: {fileID: 1083240128}
-  m_Layer: 0
-  m_Name: AudioManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1083240128
+--- !u!114 &1083240128 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 5981889893357628443, guid: dfcc0a6ed8becf94392937071146c1ee,
+    type: 3}
+  m_PrefabInstance: {fileID: 5981889894438683355}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1083240127}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 27b2bfeaf225ba342ae83c58dbe5ce21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fmodEvent:
-    Guid:
-      Data1: 509122289
-      Data2: 1250305661
-      Data3: 264023728
-      Data4: 596951265
-    Path: event:/Music
-  VermeFireRef:
-    Guid:
-      Data1: -84129657
-      Data2: 1143243864
-      Data3: 1962924210
-      Data4: 1090107919
-    Path: event:/SFX/Enemys/Verme
-  CaveiraFireRef:
-    Guid:
-      Data1: 701400385
-      Data2: 1305534580
-      Data3: 928398998
-      Data4: 310313797
-    Path: event:/SFX/Enemys/Caveira
-  MoscaFireRef:
-    Guid:
-      Data1: -707738071
-      Data2: 1335283477
-      Data3: 967536785
-      Data4: -246851781
-    Path: event:/SFX/Enemys/Mosca
-  DemonioFireRef:
-    Guid:
-      Data1: -1447773345
-      Data2: 1127699258
-      Data3: -14036327
-      Data4: 410151608
-    Path: event:/SFX/Enemys/Demonio
-  KillEnemyRef:
-    Guid:
-      Data1: -1692103932
-      Data2: 1159749138
-      Data3: -1331175776
-      Data4: -1965687594
-    Path: event:/SFX/Enemys/EnemyDeath
-  PlayerFireRef:
-    Guid:
-      Data1: 293358123
-      Data2: 1258892124
-      Data3: 478368694
-      Data4: 257736840
-    Path: event:/SFX/Player/TiroFantasma
-  PlayerHitRef:
-    Guid:
-      Data1: -189005320
-      Data2: 1136416417
-      Data3: -1068750404
-      Data4: 650483275
-    Path: event:/SFX/Player/PlayerHit
-  PlayerKillRef:
-    Guid:
-      Data1: 704735759
-      Data2: 1301383953
-      Data3: -488196461
-      Data4: 1909382001
-    Path: event:/SFX/Player/Morrer
-  PlayerLoseBodyRef:
-    Guid:
-      Data1: 2030051423
-      Data2: 1308550440
-      Data3: -141754745
-      Data4: -505674875
-    Path: event:/SFX/Player/PerderCorpo
-  PlayerGetBodyRef:
-    Guid:
-      Data1: -158181256
-      Data2: 1230417859
-      Data3: -956724562
-      Data4: 1953346310
-    Path: event:/SFX/Player/Possuir
-  CombateType: 0
-  InCombat: 0
---- !u!4 &1083240129
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1083240127}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1295178504
 GameObject:
   m_ObjectHideFlags: 0
@@ -15982,3 +15871,72 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1001 &5981889894438683355
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5981889893357628442, guid: dfcc0a6ed8becf94392937071146c1ee,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5981889893357628442, guid: dfcc0a6ed8becf94392937071146c1ee,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5981889893357628442, guid: dfcc0a6ed8becf94392937071146c1ee,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5981889893357628442, guid: dfcc0a6ed8becf94392937071146c1ee,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5981889893357628442, guid: dfcc0a6ed8becf94392937071146c1ee,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5981889893357628442, guid: dfcc0a6ed8becf94392937071146c1ee,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5981889893357628442, guid: dfcc0a6ed8becf94392937071146c1ee,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5981889893357628442, guid: dfcc0a6ed8becf94392937071146c1ee,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5981889893357628442, guid: dfcc0a6ed8becf94392937071146c1ee,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5981889893357628442, guid: dfcc0a6ed8becf94392937071146c1ee,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5981889893357628442, guid: dfcc0a6ed8becf94392937071146c1ee,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5981889893357628516, guid: dfcc0a6ed8becf94392937071146c1ee,
+        type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: dfcc0a6ed8becf94392937071146c1ee, type: 3}
