@@ -9,6 +9,7 @@ public class EnemiesGuns : MonoBehaviour
     public GameObject shotgunCaneA, shotgunCaneB, shotgunCaneC;
     public bool isShotgun = false;
     public float firerate;
+    public int weaponDamage;
     private void Start()
     {
         cane.SetActive(!isShotgun);
@@ -25,15 +26,28 @@ public class EnemiesGuns : MonoBehaviour
             {
                 if (!isShotgun)
                 {
-                    Instantiate(bulletPrefab, cane.transform.position, cane.transform.rotation);
+                    FireBullet(cane.transform);
                 }
                 else
                 {
-                    Instantiate(bulletPrefab, shotgunCaneA.transform.position, shotgunCaneA.transform.rotation);
-                    Instantiate(bulletPrefab, shotgunCaneB.transform.position, shotgunCaneB.transform.rotation);
-                    Instantiate(bulletPrefab, shotgunCaneC.transform.position, shotgunCaneC.transform.rotation);
+                    FireBullet(shotgunCaneA.transform);
+                    FireBullet(shotgunCaneB.transform);
+                    FireBullet(shotgunCaneC.transform);
                 }
             }
         }
     }
+
+    private void FireBullet(Transform firePoint)
+    {
+        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        EnemiesBullets bulletScript = bullet.GetComponent<EnemiesBullets>();
+
+        if (bulletScript != null)
+        {
+            bulletScript.enemiesdamage = weaponDamage;
+        }
+    }
+
+
 }

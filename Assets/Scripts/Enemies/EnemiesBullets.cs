@@ -8,14 +8,15 @@ public class EnemiesBullets : MonoBehaviour
     public float enemiesbulletVelocity;
     public int enemiesdamage;
     public float maxRange;
-    private float distanceTraveled = 0.0f;
+    public Collider bullet;
+    private float range = 0.0f;
 
     void Update()
     {
         transform.Translate(Vector3.forward * enemiesbulletVelocity * Time.deltaTime);
-        distanceTraveled += enemiesbulletVelocity * Time.deltaTime;
+        range += enemiesbulletVelocity * Time.deltaTime;
 
-        if (distanceTraveled >= maxRange)
+        if (range >= maxRange)
         {
             Destroy(gameObject);
         }
@@ -31,8 +32,13 @@ public class EnemiesBullets : MonoBehaviour
             {
                 playerScript.TakeDamage(enemiesdamage);
             }
-
-            Destroy(gameObject);
+            DestroyBullet();
         }
+    }
+    private void DestroyBullet()
+    {
+        enemiesbulletVelocity = 0;
+        bullet.enabled = false;
+        Destroy(gameObject, 1f);
     }
 }

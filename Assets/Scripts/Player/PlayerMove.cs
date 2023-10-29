@@ -83,7 +83,6 @@ public class PlayerMove : MonoBehaviour
             Vector3 moveDirection = transform.forward;
             float dashLerpFactor = Mathf.Clamp01(dashTimer / dashDuration);
             float currentSpeed = Mathf.Lerp(dashSpeed, moveSpeed, dashLerpFactor);
-
             transform.Translate(moveDirection * currentSpeed * Time.deltaTime, Space.World);
         }
     }
