@@ -9,8 +9,11 @@ public class GameManager : MonoBehaviour
     public bool possess = false;
     public PlayerMove player;
     public PlayerPossess playerPossess;
+    public LittleFire dungeonSpawner;
+    public int actualDungeon = 0;
     private void Awake()
     {
         instance = this;
     }
+
 }

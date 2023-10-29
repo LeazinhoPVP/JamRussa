@@ -45,6 +45,7 @@ public class PlayerPossess : MonoBehaviour
             {
             life.currentHealth += 1;
             }
+            GameManager.instance.dungeonSpawner.EnemyCounter();
         }
     }
     public void BecomeGhost()

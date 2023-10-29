@@ -52,6 +52,7 @@ public class Enemies : MonoBehaviour
             timer += Time.deltaTime;
             if(timer > 5)
             {
+                GameManager.instance.dungeonSpawner.EnemyCounter();
                 Destroy(gameObject);
             }
         }
