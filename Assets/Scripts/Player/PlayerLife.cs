@@ -17,7 +17,10 @@ public class PlayerLife : MonoBehaviour
     {
         currentHealth -= damage;
         sliderHealthBar.value = currentHealth;
-
+        if (currentHealth <= 2)
+        {
+            GameManager.instance.playerPossess.BecomeGhost();
+        }
         if (currentHealth <= 0)
         {
             Destroy(gameObject);

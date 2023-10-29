@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public Transform target;
     public bool possess = false;
     public PlayerMove player;
+    public PlayerPossess playerPossess;
     private void Awake()
     {
         instance = this;

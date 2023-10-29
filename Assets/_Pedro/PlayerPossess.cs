@@ -9,8 +9,12 @@ public class PlayerPossess : MonoBehaviour
     public int playerBody = 0;
     [SerializeField] GameObject[] playerBodies = new GameObject[5];
     [SerializeField] PlayerMove playerMove;
+    [SerializeField] PlayerLife life;
+    EnemiesGuns enemy;
+    Enemies enemyTest;
     private void Start()
     {
+        GameManager.instance.playerPossess = this;
         playerMove.head = playerBodies[playerBody];
     }
 
@@ -26,8 +30,8 @@ public class PlayerPossess : MonoBehaviour
     }
     public void startProcess(Collider other)
     {
-        Enemies enemyTest = other.GetComponent<Enemies>();
-        EnemiesGuns enemy = other.GetComponent<EnemiesGuns>();
+        enemyTest = other.GetComponent<Enemies>();
+        enemy = other.GetComponent<EnemiesGuns>();
         if (enemyTest.currentHealth <= 0)
         {
             Destroy(enemy.gameObject);
@@ -36,6 +40,24 @@ public class PlayerPossess : MonoBehaviour
             playerBody = enemy.enemyType;
             playerMove.head = playerBodies[playerBody];
             canPosses = false;
+            life.maxHealth =  3;
+            if(life.currentHealth < life.maxHealth)
+            {
+            life.currentHealth += 1;
+            }
+        }
+    }
+    public void BecomeGhost()
+    {
+        playerBodies[playerBody].SetActive(false);
+        playerBodies[0].SetActive(true);
+        playerBody = 0;
+        playerMove.head = playerBodies[0];
+        canPosses = true;
+        life.maxHealth = 2;
+        if (life.currentHealth > life.maxHealth)
+        {
+            life.currentHealth += life.maxHealth;
         }
     }
     IEnumerator Possess()

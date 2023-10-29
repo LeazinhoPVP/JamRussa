@@ -300,7 +300,7 @@ GameObject:
   - component: {fileID: 3844858834934880032}
   - component: {fileID: 9090674053394295093}
   m_Layer: 0
-  m_Name: AllyDemonio
+  m_Name: DemonioAlly
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
