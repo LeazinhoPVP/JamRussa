@@ -31,11 +31,7 @@ public class LittleFire : MonoBehaviour
     }
     public void SpawnDungeon()
     {
-        if (AudioManager.audioManager.InCombat != 1)
-        {
-            AudioManager.audioManager.CombateType = Random.Range(0, 2);
-        }
-        AudioManager.audioManager.InCombat = 1;      
+        AudioManager.audioManager.InCombat = 1;
         Vector3 spawnPosition = dungeonLocation.position - new Vector3(0f, 0f, 0f);
         GameObject i = Instantiate(dungeon[GameManager.instance.actualDungeon], spawnPosition, dungeonLocation.rotation);
         actualDungeonObj = i;
