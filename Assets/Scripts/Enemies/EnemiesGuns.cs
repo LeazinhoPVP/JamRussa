@@ -35,14 +35,17 @@ public class EnemiesGuns : MonoBehaviour
             {
                 case 0:
                     //Ghost
+                    AudioManager.audioManager.PlayerFire();
                     FireBullet(cane.transform);
                     break;
                 case 1:
                     //Mosca
+                    AudioManager.audioManager.MoscaFire();
                     FireBullet(cane.transform);
                     break;
                 case 2:
                     //Caveira
+                    AudioManager.audioManager.CaveiraFire();
                     FireBullet(skullCaneA.transform);
                     FireBullet(skullCaneB.transform);
                     FireBullet(skullCaneC.transform);
@@ -50,12 +53,14 @@ public class EnemiesGuns : MonoBehaviour
                     break;
                 case 3:
                     //Verme
+                    AudioManager.audioManager.VermeFire();
                     FireBullet(slugCaneA.transform);
                     FireBullet(slugCaneB.transform);
                     FireBullet(slugCaneC.transform);
                     break;
                 case 4:
                     //Demonio
+                    AudioManager.audioManager.DemonioFire();
                     FireBullet(cane.transform);
                     break;
             }
