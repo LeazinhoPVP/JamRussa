@@ -19,11 +19,10 @@ public class EnemiesGuns : MonoBehaviour
 
     private IEnumerator DoAttack()
     {
-        while (true)
+        while (enemy.currentHealth > 0)
         {
             yield return new WaitForSeconds(atackRate);
-            enemy.animator.SetTrigger("Attack");
-            
+            enemy.animator.SetTrigger("Attack");        
         }
     }
     public void Fire()

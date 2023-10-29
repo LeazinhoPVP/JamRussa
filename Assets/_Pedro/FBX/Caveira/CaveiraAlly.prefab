@@ -513,9 +513,10 @@ GameObject:
   - component: {fileID: 8637506036172064782}
   - component: {fileID: 8416127924419997610}
   - component: {fileID: 5702756748902602203}
+  - component: {fileID: 4480649380461461630}
   m_Layer: 0
   m_Name: CaveiraAlly
-  m_TagString: Enemy
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -591,7 +592,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 6281738804807888444, guid: 7bea01e7b9a35c142854b4c31c2a0f00,
     type: 3}
   cane: {fileID: 0}
-  firerate: 0.5
+  firerate: 2
   type: 2
   slugCaneA: {fileID: 0}
   slugCaneB: {fileID: 0}
@@ -601,6 +602,22 @@ MonoBehaviour:
   skullCaneC: {fileID: 1657205474682612266}
   skullCaneD: {fileID: 6853739625819597539}
   animator: {fileID: 8637506036172064782}
+--- !u!54 &4480649380461461630
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8872087040509015821}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 4
+  m_CollisionDetection: 0
 --- !u!1 &9030523572877757021
 GameObject:
   m_ObjectHideFlags: 0

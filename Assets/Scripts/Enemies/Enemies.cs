@@ -45,6 +45,7 @@ public class Enemies : MonoBehaviour
         }
         if(currentHealth <= 0)
         {
+            animator.enabled = false;
             speed = 0;
             timer += Time.deltaTime;
             if(timer > 5)

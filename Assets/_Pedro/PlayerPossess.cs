@@ -20,7 +20,6 @@ public class PlayerPossess : MonoBehaviour
         {
             if (other.CompareTag("Enemy"))
             {
-                Debug.Log("teste");
                 startProcess(other);
             }
         }     
@@ -31,6 +30,7 @@ public class PlayerPossess : MonoBehaviour
         EnemiesGuns enemy = other.GetComponent<EnemiesGuns>();
         if (enemyTest.currentHealth <= 0)
         {
+            Destroy(enemy.gameObject);
             playerBodies[playerBody].SetActive(false);
             playerBodies[enemy.enemyType].SetActive(true);
             playerBody = enemy.enemyType;

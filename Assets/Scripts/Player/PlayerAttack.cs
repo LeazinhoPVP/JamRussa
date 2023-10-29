@@ -11,25 +11,30 @@ public class PlayerAttack : MonoBehaviour
     public GameObject slugCaneA, slugCaneB, slugCaneC;
     public GameObject skullCaneA, skullCaneB, skullCaneC, skullCaneD;
     public Animator animator;
+    private bool resumeFire = true;
 
     private float lastFire;
 
     private void Start()
     {
-        lastFire = Time.time;
+        lastFire = 0;
     }
 
     private void Update()
     {
-        if (Input.GetKey(KeyCode.Mouse0) && CanShoot())
+        if (Input.GetKey(KeyCode.Mouse0) && CanShoot() && resumeFire)
         {
             animator.SetTrigger("Attack");
+            resumeFire = false;
         }
     }
-
+    public void EndedAnimation()
+    {
+        resumeFire = true;
+    }
     private bool CanShoot()
     {
-        return Time.time - lastFire >= 1f / firerate;
+        return Time.time - lastFire >= firerate;
     }
     private void FireBullet(Transform firePoint)
     {
@@ -42,7 +47,7 @@ public class PlayerAttack : MonoBehaviour
         {
             case 0:
                 //Ghost
-                //AudioManager.audioManager.PlayerFire();
+                AudioManager.audioManager.PlayerFire();
                 FireBullet(cane.transform);
                 break;
             case 1:

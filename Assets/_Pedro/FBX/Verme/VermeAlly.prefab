@@ -211,7 +211,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c0c9955bec815754aa9cd8afd4bb6cec, type: 2}
+  - {fileID: 2100000, guid: 47d864c3f89a4514d8442eb8e1fa74c8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -322,13 +322,12 @@ GameObject:
   m_Component:
   - component: {fileID: 6161029568133740881}
   - component: {fileID: 5608809484374353526}
-  - component: {fileID: 505191142315752283}
-  - component: {fileID: 4115442205061035713}
-  - component: {fileID: -3383114737824471134}
-  - component: {fileID: -3771006393370223331}
+  - component: {fileID: 4358959152327783057}
+  - component: {fileID: 3225560128581113346}
+  - component: {fileID: -4753811637972465983}
   m_Layer: 0
-  m_Name: Verme
-  m_TagString: Enemy
+  m_Name: VermeAlly
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -363,7 +362,7 @@ Animator:
   m_GameObject: {fileID: 6830710573516874731}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 45a6f86471b584f43ac3119ad585bd42, type: 2}
+  m_Controller: {fileID: 9100000, guid: cddb818a9d4f74849b61a38519accc19, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -374,7 +373,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &505191142315752283
+--- !u!114 &4358959152327783057
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -383,14 +382,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 6830710573516874731}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63bf38fa76d15e441a474bc3462d2e36, type: 3}
+  m_Script: {fileID: 11500000, guid: ad2a1018075ee8543ac12a7af89b05a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 4115442205061035713}
-  enemyType: 3
-  bulletPrefab: {fileID: 9008499812475778835, guid: aaaf1b630ad49234d9c19b07021d2eca,
+  bulletPrefab: {fileID: 6281738804807888444, guid: 7bea01e7b9a35c142854b4c31c2a0f00,
     type: 3}
   cane: {fileID: 0}
+  firerate: 0
+  type: 3
   slugCaneA: {fileID: 1244177700098556610}
   slugCaneB: {fileID: 116019228004691068}
   slugCaneC: {fileID: 5837576631338683668}
@@ -398,42 +397,8 @@ MonoBehaviour:
   skullCaneB: {fileID: 0}
   skullCaneC: {fileID: 0}
   skullCaneD: {fileID: 0}
-  atackRate: 3
---- !u!114 &4115442205061035713
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6830710573516874731}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c4f1bce792559404b9ce2b59c40b799d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 3
-  rotationSpeed: 5
-  detectionRange: 40
-  retreatDistance: 5
-  maxHealth: 1
-  currentHealth: 1
-  player: {fileID: 0}
   animator: {fileID: 5608809484374353526}
---- !u!136 &-3383114737824471134
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6830710573516874731}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.8
-  m_Height: 3
-  m_Direction: 1
-  m_Center: {x: 0, y: 1, z: 0}
---- !u!54 &-3771006393370223331
+--- !u!54 &3225560128581113346
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -449,6 +414,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 4
   m_CollisionDetection: 0
+--- !u!136 &-4753811637972465983
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6830710573516874731}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.8
+  m_Height: 3
+  m_Direction: 1
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1 &7141224244293090465
 GameObject:
   m_ObjectHideFlags: 0

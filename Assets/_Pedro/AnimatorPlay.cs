@@ -10,4 +10,8 @@ public class AnimatorPlay : MonoBehaviour
     {
         player.Shoot();
     }
+    public void termine()
+    {
+        player.EndedAnimation();
+    }
 }
