@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PlayerLife : MonoBehaviour
@@ -9,6 +10,9 @@ public class PlayerLife : MonoBehaviour
     public float currentHealth;
     public Slider sliderHealthBar;
     public Text debugTxt;
+
+
+    public GameObject SFXDeath;
     public void Start()
     {
         currentHealth = maxHealth;
@@ -28,7 +32,8 @@ public class PlayerLife : MonoBehaviour
         if (currentHealth <= 0)
         {
             AudioManager.audioManager.PlayerKill();
-            Destroy(gameObject);
+            Instantiate(SFXDeath, transform.position, Quaternion.identity);
+            SceneManager.LoadScene("Defeat");
         }
     }
 }
