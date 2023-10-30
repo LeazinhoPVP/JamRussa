@@ -47,7 +47,7 @@ public class Enemies : MonoBehaviour
         }
         if(currentHealth <= 0)
         {
-            if (cantPosses)
+            if (cantPosses || GameManager.instance.playerIsGhost == false)
                 Destroy(gameObject);
 
             rotationSpeed = 0;

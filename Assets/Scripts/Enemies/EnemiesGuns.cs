@@ -37,6 +37,7 @@ public class EnemiesGuns : MonoBehaviour
             else
             {
                 Fire();
+                    
             }
             yield return new WaitForSeconds(atackRate);
         }
@@ -51,6 +52,10 @@ public class EnemiesGuns : MonoBehaviour
     }
     public void Fire()
     {
+        if (GameManager.instance.playerIsAlive == true)
+        {
+
+
             switch (enemyType)
             {
                 case 0:
@@ -60,13 +65,13 @@ public class EnemiesGuns : MonoBehaviour
                     break;
                 case 1:
                     //Mosca
-                    
+
                     AudioManager.audioManager.MoscaFire();
                     FireBullet(cane.transform);
                     break;
                 case 2:
                     //Caveira
-                    
+
                     if (distance <= 15)
                     {
                         AudioManager.audioManager.CaveiraFire();
@@ -75,9 +80,9 @@ public class EnemiesGuns : MonoBehaviour
                         FireBullet(skullCaneC.transform);
                         FireBullet(skullCaneD.transform);
                     }
-                break;
+                    break;
                 case 3:
-                //Verme
+                    //Verme
                     if (distance <= 10)
                     {
                         AudioManager.audioManager.VermeFire();
@@ -85,20 +90,25 @@ public class EnemiesGuns : MonoBehaviour
                         FireBullet(slugCaneB.transform);
                         FireBullet(slugCaneC.transform);
                     }
-                        break;
+                    break;
                 case 4:
-                //Demonio
+                    //Demonio
                     if (distance <= 20)
                     {
                         AudioManager.audioManager.DemonioFire();
                         FireBullet(cane.transform);
                     }
-                
+
                     break;
             }
+        }
     }
     private void FireBullet(Transform firePoint)
     {
+        
+        
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        
+        
     }
 }

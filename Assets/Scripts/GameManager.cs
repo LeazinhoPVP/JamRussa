@@ -12,7 +12,8 @@ public class GameManager : MonoBehaviour
     public LittleFire dungeonSpawner;
     public int actualDungeon = 0;
 
-
+    public bool playerIsAlive = true;
+    public bool playerIsGhost = true;
 
     private void Awake()
     {

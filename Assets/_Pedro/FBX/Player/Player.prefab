@@ -72,6 +72,8 @@ MonoBehaviour:
   maxHealth: 2
   currentHealth: 2
   sliderHealthBar: {fileID: 0}
+  debugTxt: {fileID: 0}
+  SFXDeath: {fileID: 830819506480967244, guid: e279d2531b1068342943abd2861c4721, type: 3}
 --- !u!114 &9631589633490543
 MonoBehaviour:
   m_ObjectHideFlags: 0

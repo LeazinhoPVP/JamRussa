@@ -5019,7 +5019,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletVelocity: 50
-  damage: 10
+  damage: 1
   bullet: {fileID: 6286290158803029442}
   HitEffect: {fileID: 3560846705430591641}
 --- !u!1001 &7703979975589658043

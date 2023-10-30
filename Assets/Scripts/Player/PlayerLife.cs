@@ -33,7 +33,14 @@ public class PlayerLife : MonoBehaviour
         {
             AudioManager.audioManager.PlayerKill();
             Instantiate(SFXDeath, transform.position, Quaternion.identity);
-            SceneManager.LoadScene("Defeat");
+            GameManager.instance.playerIsAlive = false;          
+            Invoke("PlayerDead", 3f);
+            gameObject.SetActive(false);
         }
+    }
+
+    void PlayerDead()
+    {
+        SceneManager.LoadScene("Defeat");
     }
 }

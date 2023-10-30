@@ -34,6 +34,7 @@ public class PlayerPossess : MonoBehaviour
         enemy = other.GetComponent<EnemiesGuns>();
         if (enemyTest.currentHealth <= 0)
         {
+            GameManager.instance.playerIsGhost = false;
             Destroy(enemy.gameObject);
             playerBodies[playerBody].SetActive(false);
             playerBodies[enemy.enemyType].SetActive(true);
@@ -50,6 +51,7 @@ public class PlayerPossess : MonoBehaviour
     }
     public void BecomeGhost()
     {
+        GameManager.instance.playerIsGhost = true;
         playerBodies[playerBody].SetActive(false);
         playerBodies[0].SetActive(true);
         playerBody = 0;
