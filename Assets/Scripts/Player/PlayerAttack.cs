@@ -77,10 +77,5 @@ public class PlayerAttack : MonoBehaviour
                 FireBullet(cane.transform);
                 break;
         }
-        /*if (bulletPrefab != null && cane != null) // Esse if faz o jogador atirar dois tiros ao mesmo tempo no modo fantasma
-        {
-            lastFire = Time.time;
-            Instantiate(bulletPrefab, cane.position, cane.rotation);
-        }*/
     }
 }
