@@ -188,27 +188,27 @@ PrefabInstance:
     - target: {fileID: 5981889893357628443, guid: dfcc0a6ed8becf94392937071146c1ee,
         type: 3}
       propertyPath: fmodEvent.Path
-      value: 
+      value: event:/Music
       objectReference: {fileID: 0}
     - target: {fileID: 5981889893357628443, guid: dfcc0a6ed8becf94392937071146c1ee,
         type: 3}
       propertyPath: fmodEvent.Guid.Data1
-      value: 0
+      value: 509122289
       objectReference: {fileID: 0}
     - target: {fileID: 5981889893357628443, guid: dfcc0a6ed8becf94392937071146c1ee,
         type: 3}
       propertyPath: fmodEvent.Guid.Data2
-      value: 0
+      value: 1250305661
       objectReference: {fileID: 0}
     - target: {fileID: 5981889893357628443, guid: dfcc0a6ed8becf94392937071146c1ee,
         type: 3}
       propertyPath: fmodEvent.Guid.Data3
-      value: 0
+      value: 264023728
       objectReference: {fileID: 0}
     - target: {fileID: 5981889893357628443, guid: dfcc0a6ed8becf94392937071146c1ee,
         type: 3}
       propertyPath: fmodEvent.Guid.Data4
-      value: 0
+      value: 596951265
       objectReference: {fileID: 0}
     - target: {fileID: 5981889893357628516, guid: dfcc0a6ed8becf94392937071146c1ee,
         type: 3}
@@ -1097,7 +1097,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1198431288}
-  m_LocalRotation: {x: 0.56062883, y: 0.000000014248038, z: -0.000000009646394, w: 0.82806724}
+  m_LocalRotation: {x: 0.56062883, y: -0.000000014248041, z: 0.000000009646396, w: 0.82806724}
   m_LocalPosition: {x: 0, y: 26.026001, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1261,7 +1261,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1280553034}
-  m_LocalRotation: {x: 0.56062883, y: 0.000000014248038, z: -0.000000009646394, w: 0.82806724}
+  m_LocalRotation: {x: 0.56062883, y: -0.000000014248041, z: 0.000000009646396, w: 0.82806724}
   m_LocalPosition: {x: 0, y: 26.026001, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
