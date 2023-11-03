@@ -53,10 +53,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.65
+  m_Radius: 0.62
   m_Height: 2
   m_Direction: 1
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Center: {x: 0, y: 1, z: 0.15}
 --- !u!114 &6382616069635530249
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112,7 +112,10 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 64
+  mainCamera: {fileID: 0}
   head: {fileID: 0}
+  hand: {fileID: 0}
+  handPos: {fileID: 0}
   moveSpeed: 10
   dashSpeed: 15
   dashDuration: 1

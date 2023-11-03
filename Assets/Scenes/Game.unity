@@ -3084,7 +3084,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 6286290158803029443, guid: 9de1a6c068b291448affc4857f35535e,
     type: 3}
-  cane: {fileID: 1183286265}
+  cane: {fileID: 3037825704480766763}
   firerate: 0.7
   type: 0
   slugCaneA: {fileID: 0}

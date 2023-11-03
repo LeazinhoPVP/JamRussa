@@ -47,6 +47,16 @@ public class PlayerMove : MonoBehaviour
         {
             Dash();
         }
+
+        if (GameManager.instance.playerIsGhost)
+        {
+            hand.SetActive(true);
+        }
+        else
+        {
+            hand.SetActive(false);
+        }
+
     }
 
     private void FixedUpdate()
