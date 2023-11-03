@@ -3,8 +3,10 @@ using UnityEngine;
 public class PlayerMove : MonoBehaviour
 {
     [SerializeField] private LayerMask groundMask;
-    private Camera mainCamera;
+    public Camera mainCamera;
     public GameObject head;
+    public GameObject hand;
+    public Transform handPos;
     public float moveSpeed;
     public float dashSpeed;
     public float dashDuration;
@@ -15,11 +17,12 @@ public class PlayerMove : MonoBehaviour
 
     private Rigidbody rb;
 
+
+
     public bool ghost = true;
 
     void Start()
     {
-        mainCamera = Camera.main;
         GameManager.instance.player = this;
 
         rb = GetComponent<Rigidbody>();
@@ -31,6 +34,10 @@ public class PlayerMove : MonoBehaviour
     {
         Move();
 
+        float handDis = Mathf.Abs(Vector3.Distance(hand.transform.position, handPos.position));
+
+        if (handDis >= 0.1f)
+            hand.transform.position = Vector3.MoveTowards(hand.transform.position, handPos.position, handDis * 4 * Time.deltaTime);
         if (Input.GetKeyDown(KeyCode.Space) && !isDashing && Time.time > dashCooldownTimer)
         {
             StartDash();
@@ -70,6 +77,7 @@ public class PlayerMove : MonoBehaviour
             float pitch = Mathf.Atan2(direction.y, direction.magnitude) * Mathf.Rad2Deg;
             head.transform.localRotation = Quaternion.Euler(-pitch, 0, 0);
             head.transform.forward = direction;
+            hand.transform.rotation = Quaternion.LookRotation(direction, Vector3.up);
         }
     }
 
@@ -94,7 +102,7 @@ public class PlayerMove : MonoBehaviour
     private (bool success, Vector3 position) GetMousePosition()
     {
         var ray = mainCamera.ScreenPointToRay(Input.mousePosition);
-
+        Debug.DrawRay(ray.origin,ray.direction * 100);
         if (Physics.Raycast(ray, out var hitInfo, 100, groundMask))
         {
             return (success: true, position: hitInfo.point);
