@@ -41,11 +41,6 @@ public class PlayerPossess : MonoBehaviour
             playerBody = enemy.enemyType;
             playerMove.head = playerBodies[playerBody];
             canPosses = false;
-            life.maxHealth =  3;
-            if(life.currentHealth < life.maxHealth)
-            {
-            life.currentHealth += 1;
-            }
             GameManager.instance.dungeonSpawner.EnemyCounter();
         }
     }
@@ -57,11 +52,6 @@ public class PlayerPossess : MonoBehaviour
         playerBody = 0;
         playerMove.head = playerBodies[0];
         canPosses = true;
-        life.maxHealth = 2;
-        if (life.currentHealth > life.maxHealth)
-        {
-            life.currentHealth += life.maxHealth;
-        }
     }
     IEnumerator Possess()
     {

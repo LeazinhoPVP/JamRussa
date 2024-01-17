@@ -30,7 +30,7 @@ public class EnemiesBullets : MonoBehaviour
 
             if (playerScript != null)
             {
-                playerScript.TakeDamage(enemiesdamage);
+                playerScript.TakeDamage();
             }
             DestroyBullet();
         }
